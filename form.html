@@ -1,67 +1,68 @@
 <html>
 <head>
-  <title>Accessible Components</title>
+  <title>Form Demo | Accessible Components</title>
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 </head>
 <body>
-<h1>Form demo</h1>
+  <h1>Form demo</h1>
 
-<form>
-  <fieldset>
-    <legend>Legend</legend>
-
-    <p>
-      <label for="full-name">Full name</label>
-      <input id="full-name" type="text" class="full-name" />
-    </p>
-
+  <form>
     <fieldset>
-      <legend><span>Date of birth</span></legend>
-      <div class="inline group">
-        <p class="group">
-          <label for="day" class="visuallyhidden">Day</label>
-          <select id="day" type="text">
-            <option value="Day">Day</option>
-            <!-- Other options go here -->
-          </select>
-        </p>
-        <p class="group">
-          <label for="month" class="visuallyhidden">Month</label>
-          <select id="month" type="text">
-            <option value="Month">Month</option>
-            <!-- Other options go here -->
-          </select>
-        </p>
-        <p class="group">
-          <label for="year" class="visuallyhidden">Year</label>
-          <select id="year" type="text">
-            <option value="Year">Year</option>
-            <!-- Other options go here -->
-          </select>
-        </p>
-      </div>
+      <legend>Legend</legend>
+
+      <p>
+        <label for="full-name">Full name</label>
+        <input id="full-name" type="text" class="full-name" />
+      </p>
+
+      <fieldset>
+        <legend><span>Date of birth</span></legend>
+        <div class="inline group">
+          <p class="group">
+            <label for="day" class="visuallyhidden">Day</label>
+            <select id="day" type="text">
+              <option value="Day">Day</option>
+              <!-- Other options go here -->
+            </select>
+          </p>
+          <p class="group">
+            <label for="month" class="visuallyhidden">Month</label>
+            <select id="month" type="text">
+              <option value="Month">Month</option>
+              <!-- Other options go here -->
+            </select>
+          </p>
+          <p class="group">
+            <label for="year" class="visuallyhidden">Year</label>
+            <select id="year" type="text">
+              <option value="Year">Year</option>
+              <!-- Other options go here -->
+            </select>
+          </p>
+        </div>
+      </fieldset>
+
+      <p class="group">
+        <label for="telephone">Telephone</label>
+        <input id="telephone" type="text">
+        <span class="hint">Include your country code</span>
+      </p>
+
+      <p class="group">
+        <label for="code">Code</label>
+        <input id="code" type="text" class="small">
+        <span class="inline hint">The three numbers on the back of the card</span>
+      </p>
+
+      <p class="group">
+        <label for="password">Password</label>
+        <span class="hint">Make it at least six characters long</span>
+        <input id="password" type="password">
+      </p>
+
+      <button>Button</button>
     </fieldset>
 
-    <p class="group">
-      <label for="telephone">Telephone</label>
-      <input id="telephone" type="text">
-      <span class="hint">Include your country code</span>
-    </p>
-
-    <p class="group">
-      <label for="code">Code</label>
-      <input id="code" type="text" class="small">
-      <span class="inline hint">The three numbers on the back of the card</span>
-    </p>
-
-    <p class="group">
-      <label for="password">Password</label>
-      <span class="hint">Make it at least six characters long</span>
-      <input id="password" type="password">
-    </p>
-
-    <button>Button</button>
-  </fieldset>
-
-</form>
+  </form>
 </body>
 </html>
