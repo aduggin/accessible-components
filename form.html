@@ -69,16 +69,36 @@
   <hr>
 
   <h2>Code demo</h2>
-  <pre>
-    <code class="lang-html">
-      "
-      <p class="group">
-        <label for="password">Password</label>
-        <span class="hint">Make it at least six characters long</span>
-        <input id="password" type="password">
-      </p>
-      "
-    </code>
-  </pre>
+  <pre class="prettyprint lang-html" id="html_lang">Fibonacci Numbers
+
+&lt;noscript&gt;
+  &lt;dl style="list-style: disc"&gt;
+    &lt;dt&gt;Fibonacci numbers&lt;/dt&gt;
+    &lt;dd&gt;1&lt;/dd&gt;
+    &lt;dd&gt;1&lt;/dd&gt;
+    &lt;dd&gt;2&lt;/dd&gt;
+    &lt;dd&gt;3&lt;/dd&gt;
+    &lt;dd&gt;5&lt;/dd&gt;
+    &lt;dd&gt;8&lt;/dd&gt;
+    &amp;hellip;
+  &lt;/dl&gt;
+&lt;/noscript&gt;
+
+&lt;script type="text/javascript"&gt;&lt;!--
+function fib(n) {
+  var a = 1, b = 1;
+  var tmp;
+  while (--n &gt;= 0) {
+    tmp = a;
+    a += b;
+    b = tmp;
+  }
+  return a;
+}
+
+document.writeln(fib(10));
+// --&gt;
+&lt;/script&gt;
+</pre>
 </body>
 </html>
