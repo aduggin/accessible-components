@@ -2,12 +2,26 @@
 <head>
   <title>Form Demo | Accessible Components</title>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    // Add a markup block after each live example container
+    $('.live-example').after("<div class='markup'></div>");
+
+    // Fill the markup block with the code from the live container
+    $('.live-example').each(function () {
+        $(this).next($('.markup')).text($(this).html());
+    });
+
+    // Wrap the code in the markup block with a <pre> tag for prettyprinting
+    $('.markup').wrapInner('<pre class="prettyprint linenums" />');
+  })
+  </script>
 </head>
 <body>
   <h1>Form demo</h1>
 
-  <form>
+  <form class="live-example">
     <fieldset>
       <legend>Legend</legend>
 
@@ -65,6 +79,7 @@
     </fieldset>
 
   </form>
+  <div class='markup'></div>
 
   <hr>
 
@@ -83,22 +98,6 @@
     &amp;hellip;
   &lt;/dl&gt;
 &lt;/noscript&gt;
-
-&lt;script type="text/javascript"&gt;&lt;!--
-function fib(n) {
-  var a = 1, b = 1;
-  var tmp;
-  while (--n &gt;= 0) {
-    tmp = a;
-    a += b;
-    b = tmp;
-  }
-  return a;
-}
-
-document.writeln(fib(10));
-// --&gt;
-&lt;/script&gt;
 </pre>
 </body>
 </html>
