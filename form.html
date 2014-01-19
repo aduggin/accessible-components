@@ -2,7 +2,79 @@
 <head>
   <title>Form Demo | Accessible Components</title>
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <style type="text/css">
+    .live-example {
+      position:relative;
+      margin:15px 0px 0px 0px;
+      padding:20px;
+      border:1px solid #ddd;  
+    }
+
+    .live-example .element {
+      display:block;
+      margin:5px 0px;
+    }
+
+    /* SPAN elements with the classes below are added by prettyprint. */
+    .pln { color: #000 }  /* plain text */
+
+    @media screen {
+      .str { color: #080 }  /* string content */
+      .kwd { color: #008 }  /* a keyword */
+      .com { color: #800 }  /* a comment */
+      .typ { color: #606 }  /* a type name */
+      .lit { color: #066 }  /* a literal value */
+      /* punctuation, lisp open bracket, lisp close bracket */
+      .pun, .opn, .clo { color: #660 }
+      .tag { color: #008 }  /* a markup tag name */
+      .atn { color: #606 }  /* a markup attribute name */
+      .atv { color: #080 }  /* a markup attribute value */
+      .dec, .var { color: #606 }  /* a declaration; a variable name */
+      .fun { color: red }  /* a function name */
+    }
+
+    /* Use higher contrast and text-weight for printable form. */
+    @media print, projection {
+      .str { color: #060 }
+      .kwd { color: #006; font-weight: bold }
+      .com { color: #600; font-style: italic }
+      .typ { color: #404; font-weight: bold }
+      .lit { color: #044 }
+      .pun, .opn, .clo { color: #440 }
+      .tag { color: #006; font-weight: bold }
+      .atn { color: #404 }
+      .atv { color: #060 }
+    }
+
+    /* Specify class=linenums on a pre to get line numbering */
+    ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+    li.L0,
+    li.L1,
+    li.L2,
+    li.L3,
+    li.L4,
+    li.L5,
+    li.L6,
+    li.L7,
+    li.L8,
+    li.L9 {
+      background:#f7f7f7;
+      border-left:1px solid #ccc;
+    }
+
+    pre.prettyprint {
+      position:relative;
+      border:1px solid #ddd;
+      line-height:2em;
+      max-height:200px;
+      overflow:auto;
+      padding:0px 0px 0px 10px;
+      background:#fdfdfd;
+      color:#bbb;
+    }
+  </style>
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
   <script type="text/javascript">
   $(function(){
     // Add a markup block after each live example container
@@ -15,6 +87,8 @@
 
     // Wrap the code in the markup block with a <pre> tag for prettyprinting
     $('.markup').wrapInner('<pre class="prettyprint linenums" />');
+
+    prettyPrint();
   })
   </script>
 </head>
@@ -79,25 +153,6 @@
     </fieldset>
 
   </form>
-  <div class='markup'></div>
 
-  <hr>
-
-  <h2>Code demo</h2>
-  <pre class="prettyprint lang-html" id="html_lang">Fibonacci Numbers
-
-&lt;noscript&gt;
-  &lt;dl style="list-style: disc"&gt;
-    &lt;dt&gt;Fibonacci numbers&lt;/dt&gt;
-    &lt;dd&gt;1&lt;/dd&gt;
-    &lt;dd&gt;1&lt;/dd&gt;
-    &lt;dd&gt;2&lt;/dd&gt;
-    &lt;dd&gt;3&lt;/dd&gt;
-    &lt;dd&gt;5&lt;/dd&gt;
-    &lt;dd&gt;8&lt;/dd&gt;
-    &amp;hellip;
-  &lt;/dl&gt;
-&lt;/noscript&gt;
-</pre>
 </body>
 </html>
