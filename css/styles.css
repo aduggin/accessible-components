@@ -1,15 +1,3 @@
-    .live-example {
-      position:relative;
-      margin:15px 0px 0px 0px;
-      padding:20px;
-      border:1px solid #ddd;  
-    }
-
-    .live-example .element {
-      display:block;
-      margin:5px 0px;
-    }
-
     /* SPAN elements with the classes below are added by prettyprint. */
     .pln { color: #000 }  /* plain text */
 
