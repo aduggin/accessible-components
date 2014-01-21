@@ -2,8 +2,8 @@
 <head>
   <title>Form Demo | Accessible Components</title>
   
-  <link rel="stylesheet" type="text/css" href="/accessible-components/css/normalize.css" />
-  <link rel="stylesheet" type="text/css" href="/accessible-components/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
   
   <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
@@ -25,66 +25,87 @@
   </script>
 </head>
 <body>
-  <h1>Form demo</h1>
+  <div class="live-example">
+    <h1>Save your progress</h1>
 
-  <form class="live-example">
-    <fieldset>
-      <legend>Legend</legend>
+    <p>You are about to save your data with the Money Advice Service</p>
 
-      <p>
-        <label for="full-name">Full name</label>
-        <input id="full-name" type="text" class="full-name" />
-      </p>
-
+    <form class="form">
       <fieldset>
-        <legend><span>Date of birth</span></legend>
-        <div class="inline group">
-          <p class="group">
-            <label for="day" class="visuallyhidden">Day</label>
+        <legend>About you</legend>
+
+        <p>* required field</p>
+
+        <p>
+          <label for="first-name">First name</label>
+          <input id="first-name" type="text" />
+        </p>
+
+        <p>
+          <label for="email">Email address *
+            <span class="u-visuallyHidden">required</span>
+          </label>
+          <input id="email" type="email" />
+        </p>
+
+        <p>
+          <label for="first-name">Password *
+            <span class="u-visuallyHidden">required</span> 
+          </label>
+          <input id="first-name" type="password" required="required" 
+            aria-required="true" aria-describedby="first-name-hint"/>
+          <span class="form-hint" id="first-name-hint">At least 8 characters</span>
+        </p>
+
+
+        <fieldset>
+          <legend>Date of birth</legend>
+          <p>
+            <label for="day" class="u-visuallyhidden">Day</label>
             <select id="day" type="text">
               <option value="Day">Day</option>
               <!-- Other options go here -->
             </select>
           </p>
-          <p class="group">
-            <label for="month" class="visuallyhidden">Month</label>
+          <p>
+            <label for="month" class="u-visuallyhidden">Month</label>
             <select id="month" type="text">
               <option value="Month">Month</option>
               <!-- Other options go here -->
             </select>
           </p>
-          <p class="group">
-            <label for="year" class="visuallyhidden">Year</label>
+          <p>
+            <label for="year" class="u-visuallyhidden">Year</label>
             <select id="year" type="text">
               <option value="Year">Year</option>
               <!-- Other options go here -->
             </select>
           </p>
-        </div>
+        </fieldset>
+
+        <p>
+          <input id="newsletter" type="checkbox" name="newsletter" value="1">
+          <label for="newsletter">I wish to subscribe to the free newsletter</label>
+        </p>
+
+        <p>
+          <input id="terms" type="checkbox" name="toppings" value="1">
+          <label for="terms">I agree to the
+            <a href="/terms-and-conditions">terms and conditions</a>
+          </label>
+        </p>      
+        <p>We will never share your personal data with any third party.<br />
+          You information is private and confidential 
+          <a href="/privacy">Our private policy</a>.
+        </p>
+
+        <a href="/resume">No I'll enter these details later</a>
+
+        <input class="button" type="submit" value="Save">
       </fieldset>
 
-      <p class="group">
-        <label for="telephone">Telephone</label>
-        <input id="telephone" type="text">
-        <span class="hint">Include your country code</span>
-      </p>
-
-      <p class="group">
-        <label for="code">Code</label>
-        <input id="code" type="text" class="small">
-        <span class="inline hint">The three numbers on the back of the card</span>
-      </p>
-
-      <p class="group">
-        <label for="password">Password</label>
-        <span class="hint">Make it at least six characters long</span>
-        <input id="password" type="password">
-      </p>
-
-      <button>Button</button>
-    </fieldset>
-
-  </form>
+    </form>
+  </div>
 
 </body>
 </html>
