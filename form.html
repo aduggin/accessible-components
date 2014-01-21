@@ -49,17 +49,17 @@
         </p>
 
         <p>
-          <label for="first-name">Password *
+          <label for="password">Password *
             <span class="u-visuallyHidden">required</span> 
           </label>
-          <input id="first-name" type="password" required="required" 
+          <input id="password" type="password" required="required" 
             aria-required="true" aria-describedby="first-name-hint"/>
           <span class="form-hint" id="first-name-hint">At least 8 characters</span>
         </p>
 
 
         <fieldset>
-          <legend>Date of birth</legend>
+          <legend aria-describedby="dob-hint">Date of birth</legend>
           <p>
             <label for="day" class="u-visuallyhidden">Day</label>
             <select id="day" type="text">
@@ -81,6 +81,9 @@
               <!-- Other options go here -->
             </select>
           </p>
+
+          <p id="dob-hint">So we can provide you with age-related advice</p>
+
         </fieldset>
 
         <p>
